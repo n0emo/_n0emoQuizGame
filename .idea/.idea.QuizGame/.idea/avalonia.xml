@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="QuizGame/AnswerControl.axaml" value="QuizGame/QuizGame.csproj" />
+        <entry key="QuizGame/App.axaml" value="QuizGame/QuizGame.csproj" />
+        <entry key="QuizGame/GameWindow.axaml" value="QuizGame/QuizGame.csproj" />
+        <entry key="QuizGame/MainWindow.axaml" value="QuizGame/QuizGame.csproj" />
+        <entry key="QuizGame/QuestionControl.axaml" value="QuizGame/QuizGame.csproj" />
+        <entry key="QuizGame/QuestionWindow.axaml" value="QuizGame/QuizGame.csproj" />
+      </map>
+    </option>
+  </component>
+</project>

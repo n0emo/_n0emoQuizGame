@@ -1,0 +1,87 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:quizGame="clr-namespace:QuizGame"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="QuizGame.GameWindow"
+        Title="GameWindow"
+        Padding="20"
+        MinWidth="800" MinHeight="600">
+    <Border
+        Width="NaN"
+        VerticalAlignment="Stretch"
+        HorizontalAlignment="Stretch">
+        <Grid
+            VerticalAlignment="Stretch"
+            HorizontalAlignment="Stretch"
+            ColumnDefinitions="300, 2*">
+            <Grid 
+                x:Name="InfoGrid"
+                HorizontalAlignment="Stretch"
+                Grid.Column="0"
+                RowDefinitions="*, *, 3*">
+                <Label 
+                    Tag="Info"
+                    Grid.Row="0"
+                    FontSize="24"
+                    Content="Информация"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Center"></Label>
+                <StackPanel
+                    Grid.Row="1">
+                    <Label
+                        x:Name="GameNameLabel"
+                        Tag="Info"
+                        Content="game name"
+                        FontSize="36"
+                        HorizontalAlignment="Center"></Label>
+                    <Label
+                        Tag="Info"
+                        Content="Очередь команды:"
+                        FontSize="24"
+                        HorizontalAlignment="Center"
+                        Margin="0,80,0,0"></Label>
+                    <Label
+                        x:Name="CurrentTurnLabel"
+                        Tag="Info"
+                        Content="current turn"
+                        FontSize="24"
+                        HorizontalAlignment="Left"></Label>
+                    <Label
+                        Tag="Info"
+                        Content="Очки команд:"
+                        FontSize="24"
+                        HorizontalAlignment="Center"
+                        Margin="0,40,0,0"></Label>
+                    <TextBlock
+                        Tag="Info"
+                        x:Name="ScoresTextBlock"
+                        Text="team scores"
+                        FontSize="24"
+                        HorizontalAlignment="Left"></TextBlock>
+                </StackPanel>
+                <Button
+                    Grid.Row="2"
+                    Content="Выход"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+                    VerticalContentAlignment="Center"
+                    Width="280" Height="50"
+                    FontSize="24"
+                    Margin="10"
+                    Click="ExitButtonClick">
+                </Button>
+            </Grid>
+            
+            <Grid 
+                x:Name="CategoriesGrid"
+                HorizontalAlignment="Stretch"
+                VerticalAlignment="Stretch"
+                Background="Beige" 
+                Grid.Column="1">
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

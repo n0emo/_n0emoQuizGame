@@ -1,0 +1,41 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="600" d:DesignHeight="400"
+        x:Class="QuizGame.MainWindow"
+        Width="450" Height="400"
+        CanResize="False"
+        Title="QuizGame">
+        <StackPanel Orientation="Vertical" Width="450" Height="400">
+                <StackPanel Orientation="Horizontal" Width="450" Height="300">
+                        <Border BorderBrush="gray" BorderThickness="1">
+                        <StackPanel Orientation="Vertical" Width="150" Height="300">
+                                <Button Width="130" Height="50" Margin="10"
+                                        HorizontalAlignment="Center"
+                                        HorizontalContentAlignment="Center"
+                                        VerticalContentAlignment="Center"
+                                        Content="Выбрать файл"
+                                        Click="FileButtonClick"/>
+                                <Label Content="Файл не выбран." Margin="10"
+                                       HorizontalAlignment="Center"
+                                       x:Name="FileLabel"/>
+                        </StackPanel>
+                        </Border>
+                        <Border BorderBrush="gray" BorderThickness="1">
+                        <StackPanel Orientation="Vertical" Width="300" Height="300">
+                                <Label Content="Информация об игре" Margin="10"
+                                       HorizontalAlignment="Center"/>
+                                <Label Content="Игра не выбрана."  Margin="10"
+                                       HorizontalAlignment="Left"
+                                       x:Name="GameInfoLabel"/>
+                        </StackPanel>
+                        </Border>
+                </StackPanel>
+                <Button Width="430" Height="80" FontSize="30" Margin="10"
+                        HorizontalAlignment="Center" VerticalAlignment="Center"
+                        HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                        Content="Начать игру"
+                        Click="StartGameClick"/>
+        </StackPanel>
+</Window>
