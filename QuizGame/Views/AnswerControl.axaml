@@ -3,7 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-             x:Class="QuizGame.AnswerControl">
+             x:Class="QuizGame.Views.AnswerControl">
     <DockPanel
         VerticalAlignment="Stretch"
         HorizontalAlignment="Stretch">
@@ -27,22 +27,25 @@
             <TextBlock
                 x:Name="AnswerTextBlock"
                 Text="question text"
+                TextWrapping="Wrap"
                 HorizontalAlignment="Center"
                 VerticalAlignment="Center"
-                FontSize="76"></TextBlock>
+                TextAlignment="Center"
+                FontSize="76"/>
             <Grid
-                Background="Red"
+                DockPanel.Dock="Top"
                 ColumnDefinitions="*,4*,*"
                 RowDefinitions="*,4*,*"
-                VerticalAlignment="Center"
-                HorizontalAlignment="Center">
+                VerticalAlignment="Stretch"
+                HorizontalAlignment="Stretch">
                 <Image
                     Grid.Column="1"
                     Grid.Row="1"
                     x:Name="AnswerImage"
-                    Stretch="UniformToFill"
+                    MaxHeight="750"
+                    Stretch="Uniform"
                     HorizontalAlignment="Stretch"
-                    VerticalAlignment="Stretch"></Image>
+                    VerticalAlignment="Stretch"/>
             </Grid>
         </StackPanel>
     </DockPanel>

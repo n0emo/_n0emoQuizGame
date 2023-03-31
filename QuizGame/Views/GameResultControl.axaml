@@ -1,0 +1,39 @@
+﻿<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="QuizGame.Views.GameResultControl">
+    <DockPanel 
+        VerticalAlignment="Stretch"
+        HorizontalAlignment="Stretch">
+        <Label
+            Content="Результаты игры."
+            FontSize="48"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            DockPanel.Dock="Top"/>
+        <Label
+            x:Name="WinnerLabel"
+            DockPanel.Dock="Top"
+            FontSize="98"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"
+            Margin="50"/>
+        <TextBlock
+            x:Name="ResultTextBlock"
+            DockPanel.Dock="Top"
+            FontSize="36"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"/>
+        <Button
+            Content="Закончить игру."
+            DockPanel.Dock="Bottom"
+            FontSize="48"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Center"
+            VerticalContentAlignment="Center"
+            HorizontalContentAlignment="Center"
+            Click="ExitButtonClick"/>
+    </DockPanel>
+</UserControl>

@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "HqArhKQmzFhlRJOOeF4cYq70mtTnjxRVg23tL2nJqSQGvm2+7Vb88iWHAqCuw7DdsHjqVdw+/H+8p+Nju1g4yg==",
+  "dgSpecHash": "5G8KBXu3keCdSps0bQtRARqKo+mRcsEUKfqPyLSrwhA+Sh0OX2j/GRsYTh/wXKdginSTf5Y6B28PqmJ9R72efg==",
   "success": true,
   "projectFilePath": "C:\\Users\\solar\\RiderProjects\\QuizGame\\QuizGame\\QuizGame.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\solar\\.nuget\\packages\\avalonia\\0.10.18\\avalonia.0.10.18.nupkg.sha512",
     "C:\\Users\\solar\\.nuget\\packages\\avalonia.angle.windows.natives\\2.1.0.2020091801\\avalonia.angle.windows.natives.2.1.0.2020091801.nupkg.sha512",
-    "C:\\Users\\solar\\.nuget\\packages\\avalonia.controls.datagrid\\0.10.18\\avalonia.controls.datagrid.0.10.18.nupkg.sha512",
+    "C:\\Users\\solar\\.nuget\\packages\\avalonia.controls.datagrid\\0.10.0\\avalonia.controls.datagrid.0.10.0.nupkg.sha512",
     "C:\\Users\\solar\\.nuget\\packages\\avalonia.desktop\\0.10.18\\avalonia.desktop.0.10.18.nupkg.sha512",
-    "C:\\Users\\solar\\.nuget\\packages\\avalonia.diagnostics\\0.10.18\\avalonia.diagnostics.0.10.18.nupkg.sha512",
+    "C:\\Users\\solar\\.nuget\\packages\\avalonia.diagnostics\\0.10.0\\avalonia.diagnostics.0.10.0.nupkg.sha512",
     "C:\\Users\\solar\\.nuget\\packages\\avalonia.freedesktop\\0.10.18\\avalonia.freedesktop.0.10.18.nupkg.sha512",
     "C:\\Users\\solar\\.nuget\\packages\\avalonia.native\\0.10.18\\avalonia.native.0.10.18.nupkg.sha512",
     "C:\\Users\\solar\\.nuget\\packages\\avalonia.reactiveui\\0.10.0\\avalonia.reactiveui.0.10.0.nupkg.sha512",

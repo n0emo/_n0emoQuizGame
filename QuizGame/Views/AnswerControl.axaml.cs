@@ -1,11 +1,10 @@
 ﻿using System;
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.Media.Imaging;
 
-namespace QuizGame;
+namespace QuizGame.Views;
 
 public partial class AnswerControl : UserControl
 {

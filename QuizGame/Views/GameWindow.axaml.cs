@@ -11,12 +11,13 @@ using Avalonia.Media;
 using Avalonia.Media.Imaging;
 using QuizGame.Core;
 
-namespace QuizGame;
+namespace QuizGame.Views;
 
 public partial class GameWindow : Window
 {
     private readonly GameSettings _gameSettings;
     private int _currentTurn;
+    private int _remainingQuestions;
     
     private object? _initialContent;
     private IBrush? _initialBackground;
@@ -51,6 +52,23 @@ public partial class GameWindow : Window
         UpdateTurn();
         UpdateScores();
         SetBackground();
+        SetFontFamily();
+
+        _remainingQuestions = _gameSettings.Categories.Select(c => c.Questions.Length).Sum();
+    }
+
+    private void SetFontFamily()
+    {
+        if(_gameSettings.FontFamily is null) return;
+        try
+        {
+            FontFamily = FontFamily.Parse(_gameSettings.FontFamily);
+        }
+        catch (Exception e)
+        {
+            Console.WriteLine(e);
+            throw;
+        }
     }
 
     private void InitializeCategories()
@@ -218,7 +236,8 @@ public partial class GameWindow : Window
             _gameSettings.Teams[args.AnsweredTeam].Score += args.Score;
             NextTurn();
             UpdateTurn();
-            _currentButton.IsVisible = false;
+            HideCurrentButton();
+            ShowResultsIfNoQuestionsRemain();
         }
         
         UpdateScores();
@@ -241,6 +260,11 @@ public partial class GameWindow : Window
             return GetColorFromString(background);
         }
 
+        return GetImageFromString(background);
+    }
+
+    private Brush? GetImageFromString(string background)
+    {
         try
         {
             return new ImageBrush(new Bitmap(_gameSettings.Path + background))
@@ -250,11 +274,12 @@ public partial class GameWindow : Window
         }
         catch (Exception)
         {
+            ShowErrorWindow($"Ошибка при задании заднего фона картинкой: \"{background}\" - нет такого файла.");
             return null;
         }
     }
-    
-    private static SolidColorBrush? GetColorFromString(string? color)
+
+    private SolidColorBrush? GetColorFromString(string? color)
     {
         if (color is null) return null;
         try
@@ -263,8 +288,53 @@ public partial class GameWindow : Window
         }
         catch (Exception)
         {
+            ShowErrorWindow($"Ошибка при задании цвета: \"{color}\" - неправильный формат цвета");
             return null;
         }
+    }
+
+    private static void ShowErrorWindow(string message)
+    {
+        var errorWIndow = new ErrorWIndow()
+        {
+            Message = message,
+            ShowActivated = true,
+        };
+        errorWIndow.Show();
+    }
+
+    private void HideCurrentButton()
+    {
+        _currentButton.IsVisible = false;
+        _remainingQuestions--;
+    }
+
+    private void ShowResultsIfNoQuestionsRemain()
+    {
+        if (_remainingQuestions > 0) return;
+
+        var gameResultControl = new GameResultControl(_gameSettings.Teams);
+        gameResultControl.Exit += delegate { Close(); };
+
+        Content = gameResultControl;
+        
+    }
+
+    private void ExtraScoreButtonClick(object? sender, RoutedEventArgs e)
+    {
+        var extraWindow = new ExtraScoreWindow()
+        {
+            Teams = _gameSettings.Teams,
+            Background =  this.FindControl<Grid>("InfoGrid").Background,
+            FontFamily = FontFamily
+        };
+        extraWindow.Exit += (o, args) =>
+        {
+            if (!args.TeamIndex.HasValue) return;
+            _gameSettings.Teams[args.TeamIndex.Value].Score += args.Score;
+            UpdateScores();
+        };
+        extraWindow.Show();
     }
 }
 

@@ -3,8 +3,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:quizGame="clr-namespace:QuizGame"
+        Icon="/Assets/QuizGame.ico"
+        WindowStartupLocation="CenterScreen"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        x:Class="QuizGame.GameWindow"
+        x:Class="QuizGame.Views.GameWindow"
         Title="GameWindow"
         Padding="20"
         MinWidth="800" MinHeight="600">
@@ -32,6 +34,7 @@
                     Grid.Row="1">
                     <Label
                         x:Name="GameNameLabel"
+                        Margin="15"
                         Tag="Info"
                         Content="game name"
                         FontSize="36"
@@ -44,6 +47,7 @@
                         Margin="0,80,0,0"></Label>
                     <Label
                         x:Name="CurrentTurnLabel"
+                        Margin="15"
                         Tag="Info"
                         Content="current turn"
                         FontSize="24"
@@ -56,23 +60,41 @@
                         Margin="0,40,0,0"></Label>
                     <TextBlock
                         Tag="Info"
+                        Margin="15"
                         x:Name="ScoresTextBlock"
                         Text="team scores"
                         FontSize="24"
                         HorizontalAlignment="Left"></TextBlock>
                 </StackPanel>
-                <Button
+                <StackPanel
                     Grid.Row="2"
-                    Content="Выход"
                     VerticalAlignment="Bottom"
-                    HorizontalAlignment="Center"
-                    HorizontalContentAlignment="Center"
-                    VerticalContentAlignment="Center"
-                    Width="280" Height="50"
-                    FontSize="24"
-                    Margin="10"
-                    Click="ExitButtonClick">
-                </Button>
+                    HorizontalAlignment="Stretch">
+                    <Button
+                        Content="Добавить доп. баллы"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Width="280" Height="50"
+                        FontSize="24"
+                        Margin="10,10,10,10"
+                        Click="ExtraScoreButtonClick">
+                    </Button>
+                    <Button
+                        IsVisible="False"
+                        Content="Выход"
+                        VerticalAlignment="Bottom"
+                        HorizontalAlignment="Center"
+                        HorizontalContentAlignment="Center"
+                        VerticalContentAlignment="Center"
+                        Width="280" Height="50"
+                        FontSize="24"
+                        Margin="10,0,10,10"
+                        Click="ExitButtonClick">
+                    </Button>
+                </StackPanel>
+               
             </Grid>
             
             <Grid 

@@ -9,6 +9,13 @@
         <entry key="QuizGame/MainWindow.axaml" value="QuizGame/QuizGame.csproj" />
         <entry key="QuizGame/QuestionControl.axaml" value="QuizGame/QuizGame.csproj" />
         <entry key="QuizGame/QuestionWindow.axaml" value="QuizGame/QuizGame.csproj" />
+        <entry key="QuizGame/Views/AnswerControl.axaml" value="QuizGame/QuizGame.csproj" />
+        <entry key="QuizGame/Views/ErrorWIndow.axaml" value="QuizGame/QuizGame.csproj" />
+        <entry key="QuizGame/Views/ExtraQuestionControl.axaml" value="QuizGame/QuizGame.csproj" />
+        <entry key="QuizGame/Views/ExtraScoreWIndow.axaml" value="QuizGame/QuizGame.csproj" />
+        <entry key="QuizGame/Views/GameResultControl.axaml" value="QuizGame/QuizGame.csproj" />
+        <entry key="QuizGame/Views/GameWindow.axaml" value="QuizGame/QuizGame.csproj" />
+        <entry key="QuizGame/Views/QuestionControl.axaml" value="QuizGame/QuizGame.csproj" />
       </map>
     </option>
   </component>

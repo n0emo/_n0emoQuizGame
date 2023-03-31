@@ -27,6 +27,9 @@ public class GameSettings
     [JsonPropertyName("CategoriesBackground")]
     public string? CategoriesBackground { get; set; }
     
+    [JsonPropertyName("FontFamily")]
+    public string? FontFamily { get; set; }
+    
     public string? Path { get; set; } 
 
     public override string ToString()

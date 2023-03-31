@@ -52,10 +52,6 @@
               "target": "Package",
               "version": "[0.10.18, )"
             },
-            "Avalonia.Diagnostics": {
-              "target": "Package",
-              "version": "[0.10.18, )"
-            },
             "MessageBoxSlim.Avalonia.2": {
               "target": "Package",
               "version": "[0.9.9, )"

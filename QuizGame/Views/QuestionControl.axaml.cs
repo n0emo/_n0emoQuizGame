@@ -8,7 +8,7 @@ using Avalonia.Markup.Xaml;
 using Avalonia.Media;
 using QuizGame.Core;
 
-namespace QuizGame;
+namespace QuizGame.Views;
 
 public partial class QuestionControl : UserControl
 {
@@ -120,7 +120,7 @@ public partial class QuestionControl : UserControl
     private void ViewAnswerClick(object sender, RoutedEventArgs args)
     {
         _initialContent = Content;
-        var answerControl = new AnswerControl(_question.AnswerVariants[_question.AnswerIndex], _question.AnswerImagePath);
+        var answerControl = new Views.AnswerControl(_question.AnswerVariants[_question.AnswerIndex], _question.AnswerImagePath);
         answerControl.Back += OnBackFromAnswer;
         Content = answerControl;
     }

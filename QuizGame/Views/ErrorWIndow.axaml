@@ -1,0 +1,32 @@
+﻿<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        Height="120" Width="300"
+        Icon="/Assets/QuizGame.ico"
+        CanResize="False"
+        x:Class="QuizGame.Views.ErrorWIndow"
+        WindowStartupLocation="CenterScreen"
+        Title="ErrorWIndow">
+    <DockPanel>
+        <TextBlock
+            x:Name="MessageTextBlock"
+            DockPanel.Dock="Top"
+            VerticalAlignment="Top"
+            HorizontalAlignment="Center"
+            TextWrapping="Wrap"
+            Margin="20"/>
+        <Button
+            Click="ExitButtonClick"
+            VerticalAlignment="Bottom"
+            HorizontalAlignment="Right"
+            HorizontalContentAlignment="Center"
+            VerticalContentAlignment="Center"
+            DockPanel.Dock="Bottom"
+            Content="OK"
+            Width="80"
+            Height="30"
+            Margin="20"></Button>
+    </DockPanel>
+</Window>

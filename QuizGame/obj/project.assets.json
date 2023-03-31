@@ -147,11 +147,11 @@
           }
         }
       },
-      "Avalonia.Controls.DataGrid/0.10.18": {
+      "Avalonia.Controls.DataGrid/0.10.0": {
         "type": "package",
         "dependencies": {
-          "Avalonia": "0.10.18",
-          "Avalonia.Remote.Protocol": "0.10.18",
+          "Avalonia": "0.10.0",
+          "Avalonia.Remote.Protocol": "0.10.0",
           "JetBrains.Annotations": "10.3.0",
           "System.Reactive": "5.0.0"
         },
@@ -186,11 +186,11 @@
           }
         }
       },
-      "Avalonia.Diagnostics/0.10.18": {
+      "Avalonia.Diagnostics/0.10.0": {
         "type": "package",
         "dependencies": {
-          "Avalonia": "0.10.18",
-          "Avalonia.Controls.DataGrid": "0.10.18",
+          "Avalonia": "0.10.0",
+          "Avalonia.Controls.DataGrid": "0.10.0",
           "Microsoft.CodeAnalysis.CSharp.Scripting": "3.4.0",
           "System.Reactive": "5.0.0"
         },
@@ -1622,15 +1622,15 @@
         "runtimes/win7-x86/native/av_libglesv2.dll"
       ]
     },
-    "Avalonia.Controls.DataGrid/0.10.18": {
-      "sha512": "LDNZxnzk++GgBeUKsqmeWJDQgF83C4Quk4Wn0z5P6vIm1f5YSSFJL6JbibbIAvjqlGjqWWFTBZpHMUNjdyw4Aw==",
+    "Avalonia.Controls.DataGrid/0.10.0": {
+      "sha512": "Mkw6uzOx1RT2+k8vvQ+eF2ndYEheI+kHrUCListB6SyaOsYxz+OAnQnzh1fFDZB25b5yF/hirw84bSBTfngwyA==",
       "type": "package",
-      "path": "avalonia.controls.datagrid/0.10.18",
+      "path": "avalonia.controls.datagrid/0.10.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "avalonia.controls.datagrid.0.10.18.nupkg.sha512",
+        "avalonia.controls.datagrid.0.10.0.nupkg.sha512",
         "avalonia.controls.datagrid.nuspec",
         "lib/netstandard2.0/Avalonia.Controls.DataGrid.dll",
         "lib/netstandard2.0/Avalonia.Controls.DataGrid.xml"
@@ -1650,15 +1650,15 @@
         "lib/netstandard2.0/Avalonia.Desktop.xml"
       ]
     },
-    "Avalonia.Diagnostics/0.10.18": {
-      "sha512": "3PjA6r0mmRUeS+R34VtYAyzmlPeqflsQ9B8E2TrZKGke0Wo6t3JsvPWA8ynA/ii0icPnnn7nmQaEZQs07ZthxQ==",
+    "Avalonia.Diagnostics/0.10.0": {
+      "sha512": "ZueZfLdkonwk3kjNMrdkuAnqw1feF7fXLcfdV97u04KIcvgfUf1IvsHDbECM+xgpg93cS0D3udjvLpS5/khD2Q==",
       "type": "package",
-      "path": "avalonia.diagnostics/0.10.18",
+      "path": "avalonia.diagnostics/0.10.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
-        "avalonia.diagnostics.0.10.18.nupkg.sha512",
+        "avalonia.diagnostics.0.10.0.nupkg.sha512",
         "avalonia.diagnostics.nuspec",
         "lib/netstandard2.0/Avalonia.Diagnostics.dll",
         "lib/netstandard2.0/Avalonia.Diagnostics.xml"
@@ -4631,7 +4631,6 @@
     "net7.0": [
       "Avalonia >= 0.10.18",
       "Avalonia.Desktop >= 0.10.18",
-      "Avalonia.Diagnostics >= 0.10.18",
       "MessageBoxSlim.Avalonia.2 >= 0.9.9",
       "XamlNameReferenceGenerator >= 1.6.1"
     ]
@@ -4685,10 +4684,6 @@
             "version": "[0.10.18, )"
           },
           "Avalonia.Desktop": {
-            "target": "Package",
-            "version": "[0.10.18, )"
-          },
-          "Avalonia.Diagnostics": {
             "target": "Package",
             "version": "[0.10.18, )"
           },

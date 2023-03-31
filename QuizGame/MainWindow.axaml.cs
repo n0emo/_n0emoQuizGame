@@ -16,6 +16,7 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         InitializeComponent();
+        
     }
 
     private async void FileButtonClick(object sender, RoutedEventArgs args)
@@ -46,7 +47,10 @@ public partial class MainWindow : Window
         }
         
         Hide();
-        GameWindow gameWindow = new GameWindow(game);
+        Views.GameWindow gameWindow = new Views.GameWindow(game)
+        {
+            ShowActivated = false,
+        };
         gameWindow.Closed += (_, _) => { Close(); };
         gameWindow.Show();
     }
